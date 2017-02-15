@@ -15,21 +15,23 @@ extension String {
     
     func turkishRegex(caseSensitive: Bool) -> NSRegularExpression? {
         do {
-            //s i o c g
+            //s i o c g u
             var regexPattern = ""
             var regexCharacter = ""
             for character in self.characters {
                 regexCharacter = ""
-                if character == "I" || character == "İ" || character == "ı" || character == "i"{
+                if character == "I" || character == "İ" || character == "ı" || character == "i" {
                     regexCharacter = "[Iİıi]"
-                } else if character == "S" || character == "Ş" || character == "s" || character == "ş"{
+                } else if character == "S" || character == "Ş" || character == "s" || character == "ş" {
                     regexCharacter = "[SŞsş]"
-                } else if character == "O" || character == "Ö" || character == "o" || character == "ö"{
+                } else if character == "O" || character == "Ö" || character == "o" || character == "ö" {
                     regexCharacter = "[OÖoö]"
-                } else if character == "C" || character == "Ç" || character == "c" || character == "ç"{
+                } else if character == "C" || character == "Ç" || character == "c" || character == "ç" {
                     regexCharacter = "[CÇcç]"
-                } else if character == "G" || character == "Ğ" || character == "g" || character == "ğ"{
+                } else if character == "G" || character == "Ğ" || character == "g" || character == "ğ" {
                     regexCharacter = "[GĞgğ]"
+                } else if character == "U" || character == "Ü" || character == "u" || character == "ü" {
+                    regexCharacter = "[UÜuü]"
                 } else {
                     regexCharacter = "\(character)"
                 }
